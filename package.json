@@ -1,0 +1,24 @@
+{
+  "name": "03-typescript",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc --watch ./src/app.ts --outDir dist",
+    "tse": "ts-node ./src/app.ts",
+    "dev": "tsc --watch ./src/app.ts --outDir dist | node --watch ./dist/app.js",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "keywords": [],
+  "author": "Jhustyn",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
